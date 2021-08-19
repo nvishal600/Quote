@@ -1,0 +1,39 @@
+<?php
+session_start();
+if(!isset($_SESSION['adminID'])){
+    header("location:login.php");
+
+
+}
+
+require "./includes/db.con.php";
+
+
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Quotes</title>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+    <h3>Quotes Of the Day</h3>
+    <a href="./logout.php" style="color:red;" class="logout">Logout</a>
+    </div>
+    <div class="dashboard">
+        <div class="title">
+            <ul>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="view_all_quotes.php">View All Quotes</a></li>
+                <li><a href="new_quotes.php">Add New Quotes</a></li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="admin">
+            <h2>Welcome Admin!</h2>
